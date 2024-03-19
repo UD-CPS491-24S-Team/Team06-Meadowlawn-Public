@@ -1,0 +1,208 @@
+/* Basic Styles */
+:root {
+    --white: #ffffff;
+    --Meadow-Blue: #30455B;
+    --Meadow-Gold: #C8A47E;
+    --black: #000000;
+    --grey-light: #dddddd;
+    --grey-dark: #555555;
+}
+
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--black);
+    color: var(--white);
+    scroll-behavior: smooth;
+}
+
+/* Centering Content */
+.centered-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--Meadow-Blue);
+    color: var(--Meadow-Gold);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .centered-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img.logo {
+    max-width: 150px;
+    transition: transform 0.5s ease;
+}
+
+header img.logo:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--Meadow-Gold);
+    text-decoration: none;
+    transition: color 0.5s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+/* Section Styles */
+section {
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 2px solid var(--grey-light);
+}
+
+section .centered-container {
+    text-align: justify;
+}
+
+/* Header Styles */
+.header-container h2 {
+    color: var(--Meadow-Gold);
+    font-size: 24px;
+}
+
+/* Feature and Developer Card Styles */
+.feature, .developers, .card {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--grey-dark);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover, .developers:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Developer Email Links */
+.developer a, .card a {
+    color: var(--Meadow-Gold); /* Sets the email link color to Meadow Gold */
+    text-decoration: none; /* Removes underline */
+    display: block; /* Makes the link take up its own line */
+    margin-top: 5px; /* Spacing between title and email */
+    transition: color 0.3s ease; /* Smooth color transition for hover effect */
+}
+
+.developer a:hover, .card a:hover {
+    text-decoration: underline; /* Adds underline on hover for better visibility */
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: var(--Meadow-Blue);
+    color: var(--Meadow-Gold);
+    padding: 20px 0;
+}
+
+footer .centered-container {
+    text-align: center;
+    font-size: 16px;
+}
+
+#contact a {
+    color: var(--Meadow-Gold);
+    text-decoration: none; /* Removes the underline */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Adds an underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header .centered-container {
+        flex-direction: column;
+    }
+
+    .feature, .developers, .card {
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+/* Carousel Styles */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--Meadow-Gold);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
