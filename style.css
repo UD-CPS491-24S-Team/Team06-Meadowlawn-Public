@@ -182,6 +182,16 @@ footer .centered-container {
     object-fit: cover;
 }
 
+/* Hide all carousel images by default */
+.carousel img {
+    display: none;
+}
+
+/* Class to display the active slide */
+.carousel img.active-slide {
+    display: block;
+}
+
 /* Arrows */
 .arrow {
     position: absolute;

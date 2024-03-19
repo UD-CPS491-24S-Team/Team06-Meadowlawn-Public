@@ -24,5 +24,10 @@ function prevSlide() {
     showSlide(slideIndex);
 }
 
+// Initialize the carousel to show the first slide and hide others
+document.addEventListener('DOMContentLoaded', function() {
+    showSlide(slideIndex);
+});
+
 // Auto-slide functionality
 setInterval(nextSlide, 5000); // Change slide every 5 seconds
